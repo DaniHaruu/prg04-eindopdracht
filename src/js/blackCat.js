@@ -1,6 +1,7 @@
-import {Actor, Vector} from "excalibur";
+import {Actor, Vector, Keys} from "excalibur";
+import {ResourceLoader, Resources} from "./resources.js";
 
-export class blackCat extends Actor {
+export class BlackCat extends Actor {
 
     constructor() {
         super({
