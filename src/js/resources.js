@@ -8,6 +8,9 @@ const Resources = {
     GameoverScreen: new ImageSource('images/gameoverScreen.webp')
 }
 
+let Resources = {
+    BlackCat: new ImageSource()
+}
 
 const ResourceLoader = new Loader()
 for (let res of Object.values(Resources)) {
