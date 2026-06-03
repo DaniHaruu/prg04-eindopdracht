@@ -4,13 +4,13 @@ import { ImageSource, Sound, Resource, Loader } from 'excalibur'
 const Resources = {
     BlackCat: new ImageSource('images/blackIdle.png'),
     WhiteCat: new ImageSource('images/whiteIdle.png'),
-    Walls: new ImageSource('images/walls.jpg'),
+    Pixelwall: new ImageSource('images/pixelwall.png'),
     GameoverScreen: new ImageSource('images/gameoverScreen.webp')
 }
 
-let Resources = {
-    BlackCat: new ImageSource()
-}
+// let Resources = {
+//     BlackCat: new ImageSource()
+// }
 
 const ResourceLoader = new Loader()
 for (let res of Object.values(Resources)) {

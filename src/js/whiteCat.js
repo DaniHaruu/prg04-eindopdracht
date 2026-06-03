@@ -5,7 +5,7 @@ export class WhiteCat extends Actor {
 
     constructor() {
         super({
-            width: Resources.whiteIdle.width, height: Resources.whiteIdle.height
+            width: Resources.WhiteCat.width, height: Resources.WhiteCat.height
         })
         console.log("Mew")
     }
