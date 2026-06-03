@@ -9,9 +9,9 @@ export class Level extends Scene {
 
     onInitialize(engine) {
 
-        for (let x = 0; x < engine.drawWidth / 32; x++) {
-            for (let y = 0; y < engine.drawHeight / 32; y++) {
-                this.add(new Pixelwall(x * 32, y * 32));
+        for (let x = 0; x < engine.drawWidth / 320; x++) {
+            for (let y = 0; y < engine.drawHeight / 320; y++) {
+                this.add(new Pixelwall(x * 320, y * 320));
             }
         }
 

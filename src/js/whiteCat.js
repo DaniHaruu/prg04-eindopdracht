@@ -11,7 +11,7 @@ export class WhiteCat extends Actor {
     }
 
     onInitialize(engine) {
-        this.graphics.use(Resources.whiteIdle.toSprite())
+        this.graphics.use(Resources.WhiteCat.toSprite())
         this.pos = new Vector(620, 360)
     }
 
