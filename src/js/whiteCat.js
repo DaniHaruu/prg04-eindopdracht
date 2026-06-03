@@ -19,10 +19,10 @@ export class WhiteCat extends Actor {
         let velX = 0
         let velY = 0
 
-        if (engine.input.keyboard.isHeld(Keys.A) && this.pos.x > 100) {
+        if (engine.input.keyboard.isHeld(Keys.A) && this.pos.x > 58) {
             velX = -250
         }
-        if (engine.input.keyboard.isHeld(Keys.D) && this.pos.x < 1180) {
+        if (engine.input.keyboard.isHeld(Keys.D) && this.pos.x < 1222) {
             velX = 250
         }
         if (engine.input.keyboard.isHeld(Keys.W) && this.pos.y > 50) {

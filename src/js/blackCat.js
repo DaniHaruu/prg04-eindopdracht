@@ -19,10 +19,10 @@ export class BlackCat extends Actor {
         let velX = 0
         let velY = 0
 
-        if (engine.input.keyboard.isHeld(Keys.Left) && this.pos.x > 100) {
+        if (engine.input.keyboard.isHeld(Keys.Left) && this.pos.x > 58) {
             velX = -250
         }
-        if (engine.input.keyboard.isHeld(Keys.Right) && this.pos.x < 1180) {
+        if (engine.input.keyboard.isHeld(Keys.Right) && this.pos.x < 1222) {
             velX = 250
         }
         if (engine.input.keyboard.isHeld(Keys.Up) && this.pos.y > 50) {
