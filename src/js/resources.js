@@ -10,12 +10,6 @@ const Resources = {
     GameoverScreen: new ImageSource('images/gameoverScreen.webp')
 }
 
-// Does it have to be "let" instead of "const"?
-// let Resources = {
-//     BlackCat: new ImageSource('images/blackIdle.png'),
-//     WhiteCat: new ImageSource('images/whiteIdle.png')
-// }
-
 const ResourceLoader = new Loader()
 for (let res of Object.values(Resources)) {
     ResourceLoader.addResource(res)
