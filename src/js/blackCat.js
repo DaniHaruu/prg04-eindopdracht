@@ -32,7 +32,6 @@ export class BlackCat extends Actor {
     }
 
     onInitialize(engine) {
-        // this.graphics.use(Resources.BlackCat.toSprite())
         this.pos = new Vector(1180, 620)
     }
 
