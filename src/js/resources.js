@@ -9,7 +9,8 @@ const Resources = {
     WhiteWalking1: new ImageSource('images/whiteWalking1.png'),
     WhiteWalking2: new ImageSource('images/whiteWalking2.png'),
     Pixelwall: new ImageSource('images/pixelwall.png'),
-    GameoverScreen: new ImageSource('images/gameoverScreen.webp')
+    GameoverScreen: new ImageSource('images/gameoverScreen.webp'),
+    Bigplatform: new ImageSource('images/bigPlatform.png')
 }
 
 const ResourceLoader = new Loader()
