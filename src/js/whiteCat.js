@@ -52,7 +52,7 @@ export class WhiteCat extends Actor {
             this.facingRight = true
             isMoving = true
         }
-        if (engine.input.keyboard.isHeld(Keys.W) && this.pos.y > 50) {
+        if (engine.input.keyboard.wasPressed(Keys.W) && this.pos.y > 50 && (this.vel.y === 0)) {
             console.log("Jump!");
             this.body.applyLinearImpulse(new Vector(0, -4000));
         }

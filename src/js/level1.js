@@ -16,7 +16,6 @@ export class Level extends Scene {
             }
         }
 
-        const bigPlatform = new BigPlatform();
         this.add(new BigPlatform(170, 695));
 
         const blackCat = new BlackCat();

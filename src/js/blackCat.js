@@ -52,7 +52,7 @@ export class BlackCat extends Actor {
             this.facingRight = true
             isMoving = true
         }
-        if (engine.input.keyboard.isHeld(Keys.Up) && this.pos.y > 50) {
+        if (engine.input.keyboard.wasPressed(Keys.Up) && this.pos.y > 50 && (this.vel.y === 0)) {
             console.log("Jump!");
             this.body.applyLinearImpulse(new Vector(0, -4000));
         }
