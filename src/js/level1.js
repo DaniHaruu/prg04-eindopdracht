@@ -18,6 +18,12 @@ export class Level extends Scene {
 
         this.add(new BigPlatform(170, 695));
 
+        this.add(new BigPlatform(640, 695));
+
+        this.add(new BigPlatform(1110, 695));
+
+        // 1280 x 720
+
         const blackCat = new BlackCat();
         this.add(blackCat);
 
