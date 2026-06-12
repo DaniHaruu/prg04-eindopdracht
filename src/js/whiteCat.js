@@ -69,5 +69,10 @@ export class WhiteCat extends Actor {
 
         // flip based on direction
         this.graphics.flipHorizontal = this.facingRight
+
+        if (this.pos.y > 800) {
+            engine.goToScene('gameover');
+            this.kill();
+        }
     }
 }

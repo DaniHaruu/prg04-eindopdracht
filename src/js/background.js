@@ -25,3 +25,15 @@ export class GameoverScreen extends Actor {
         this.z = -1
     }
 }
+
+export class WinScreen extends Actor {
+    constructor() {
+        super()
+    }
+
+    onInitialize(engine) {
+        this.graphics.use(Resources.WinScreen.toSprite())
+        this.pos = new Vector(1280 / 2, 720 / 2)
+        this.z = -1
+    }
+}
