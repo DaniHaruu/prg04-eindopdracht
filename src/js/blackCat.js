@@ -17,8 +17,8 @@ export class BlackCat extends Actor {
 
         const walkAnimation = new Animation({
             frames: [
-                {graphic: walk1, duration: 300},
-                {graphic: walk2, duration: 300}
+                {graphic: walk1, duration: 400},
+                {graphic: walk2, duration: 400}
             ]
         })
 

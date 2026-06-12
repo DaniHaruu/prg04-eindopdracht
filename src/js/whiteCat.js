@@ -28,7 +28,7 @@ export class WhiteCat extends Actor {
         this.graphics.use("idle")
 
         // remember last direction
-        this.facingRight = false
+        this.facingRight = true
     }
 
     onInitialize(engine) {
