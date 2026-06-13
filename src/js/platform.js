@@ -1,10 +1,10 @@
 import {Actor, Vector, CollisionType} from "excalibur"
 import {ResourceLoader, Resources} from './resources.js'
 
-export class BigPlatform extends Actor {
+export class Platform extends Actor {
     constructor(x, y) {
-        super({x, y, width: Resources.BigPlatform.width, height: Resources.BigPlatform.height})
-        this.graphics.use(Resources.BigPlatform.toSprite())
+        super({x, y, width: Resources.Platform.width, height: Resources.Platform.height})
+        this.graphics.use(Resources.Platform.toSprite())
         this.body.collisionType = CollisionType.Fixed
         this.body.friction = 0.5
     }

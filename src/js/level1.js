@@ -4,7 +4,7 @@ import {Resources, ResourceLoader} from './resources.js'
 import {Pixelwall} from "./background.js";
 import {BlackCat} from "./blackCat.js";
 import {WhiteCat} from "./whiteCat.js";
-import {BigPlatform} from "./bigPlatform.js";
+import {Platform} from "./platform.js";
 import {Door} from "./door.js";
 
 export class Level extends Scene {
@@ -17,11 +17,11 @@ export class Level extends Scene {
             }
         }
 
-        this.add(new BigPlatform(170, 695));
+        this.add(new Platform(170, 695));
 
-        this.add(new BigPlatform(640, 695));
+        this.add(new Platform(640, 695));
 
-        this.add(new BigPlatform(1110, 695));
+        this.add(new Platform(1110, 695));
 
         this.add(new Door(640, 515));
 

@@ -10,7 +10,7 @@ const Resources = {
     WhiteWalking2: new ImageSource('/images/whiteWalking2.png'),
     Pixelwall: new ImageSource('/images/pixelwall.png'),
     GameoverScreen: new ImageSource('/images/gameoverScreen.webp'),
-    BigPlatform: new ImageSource('/images/bigPlatform.png'),
+    Platform: new ImageSource('/images/platform.png'),
     WinScreen: new ImageSource('/images/winScreen.jpg'),
     Door: new ImageSource('/images/door.png')
 }
