@@ -12,7 +12,9 @@ const Resources = {
     GameoverScreen: new ImageSource('/images/gameoverScreen.webp'),
     Platform: new ImageSource('/images/platform.png'),
     WinScreen: new ImageSource('/images/winScreen.jpg'),
-    Door: new ImageSource('/images/door.png')
+    Door: new ImageSource('/images/door.png'),
+    BigPlatform: new ImageSource('/images/bigPlatform.png'),
+    Wall: new ImageSource('/images/wall.png')
 }
 
 const ResourceLoader = new Loader()

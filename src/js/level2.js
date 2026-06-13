@@ -6,8 +6,10 @@ import {BlackCat} from "./blackCat.js";
 import {WhiteCat} from "./whiteCat.js";
 import {Platform} from "./platform.js";
 import {Door} from "./door.js";
+import {BigPlatform} from "./bigPlatform.js";
+import {Wall} from "./wall.js";
 
-export class Level1 extends Scene {
+export class Level2 extends Scene {
 
     onInitialize(engine) {
 
@@ -17,13 +19,15 @@ export class Level1 extends Scene {
             }
         }
 
-        this.add(new Platform(170, 695));
+        this.add(new BigPlatform(310, 695));
 
-        this.add(new Platform(640, 695));
+        this.add(new Wall(310, 515));
 
-        this.add(new Platform(1110, 695));
+        this.add(new Platform(1250, 695));
 
-        this.add(new Door(640, 515));
+        this.add(new Platform(0, 500));
+
+        this.add(new Door(460, 515));
 
         // 1280 x 720
 
@@ -37,7 +41,7 @@ export class Level1 extends Scene {
     onPreUpdate(engine) {
         if (this.blackCat.atDoor && this.whiteCat.atDoor) {
             console.log("You escaped");
-            engine.goToScene('level2');
+            engine.goToScene('win');
         }
     }
 }
