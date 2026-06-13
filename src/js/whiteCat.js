@@ -1,5 +1,6 @@
 import {Actor, Vector, Keys, Animation, CollisionType} from "excalibur";
 import {ResourceLoader, Resources} from "./resources.js";
+import {Door} from "./door.js";
 
 export class WhiteCat extends Actor {
 
@@ -28,14 +29,31 @@ export class WhiteCat extends Actor {
         this.graphics.use("idle")
 
         // remember last direction
-        this.facingRight = true
+        this.facingRight = true;
+
+        this.atDoor = false;
 
         this.body.collisionType = CollisionType.Active;
     }
 
     onInitialize(engine) {
+        this.engine = engine
         this.pos = new Vector(100, 620)
         this.body.mass = 6
+        this.on('collisionstart', (event) => this.hitDoor(event))
+        this.on('collisionend', (event) => this.leftDoor(event))
+    }
+
+    hitDoor(event) {
+        if (event.other.owner instanceof Door) {
+            this.atDoor = true
+        }
+    }
+
+    leftDoor(event) {
+        if (event.other.owner instanceof Door) {
+            this.atDoor = false
+        }
     }
 
     onPreUpdate(engine) {
@@ -71,6 +89,7 @@ export class WhiteCat extends Actor {
         this.graphics.flipHorizontal = this.facingRight
 
         if (this.pos.y > 800) {
+            console.log('You fell')
             engine.goToScene('gameover');
             this.kill();
         }

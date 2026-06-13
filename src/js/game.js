@@ -3,6 +3,7 @@ import {Actor, Engine, Vector, DisplayMode, SolverStrategy} from "excalibur"
 import {Resources, ResourceLoader} from './resources.js'
 import {Level} from "./level1.js";
 import {GameOver} from "./gameover.js"
+import {Win} from "./win.js"
 
 export class Game extends Engine {
     constructor() {
@@ -24,6 +25,7 @@ export class Game extends Engine {
 
         this.add('level1', new Level())
         this.add('gameover', new GameOver())
+        this.add('win', new Win())
         this.goToScene('level1')
     }
 }
