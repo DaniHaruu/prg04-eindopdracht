@@ -48,28 +48,33 @@ export class FireHoop extends Actor {
 
         engine.currentScene.add(this.stand);
 
-        this.on("collisionstart", (event) => {
+        this.on('collisionstart', (event) => this.hitCats(event));
+        this.on('collisionend', (event) => this.leftCats(event));
 
-            const other = event.other.owner;
+        this.touchingCats = new Set();
 
-            if (other instanceof WhiteCat || other instanceof BlackCat) {
+        this.lives = 3;
+    }
 
-                this.touchingCats.add(other);
+    hitCats(event) {
+        const other = event.other.owner;
 
-                if (this.lit) {
-                    other.livesLabel.decLives();
-                }
+        if (other instanceof WhiteCat || other instanceof BlackCat) {
+            this.touchingCats.add(other);
+
+            if (this.lit) {
+                console.log("The cat got burned a little")
+                other.livesLabel.decLives();
             }
-        });
+        }
+    }
 
-        this.on("collisionend", (event) => {
+    leftCats(event) {
+        const other = event.other.owner;
 
-            const other = event.other.owner;
-
-            if (other instanceof WhiteCat || other instanceof BlackCat) {
-                this.touchingCats.delete(other);
-            }
-        });
+        if (other instanceof WhiteCat || other instanceof BlackCat) {
+            this.touchingCats.delete(other);
+        }
     }
 
     onPreUpdate(engine, delta) {

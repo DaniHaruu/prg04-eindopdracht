@@ -8,6 +8,9 @@ import {Platform} from "./platform.js";
 import {Door} from "./door.js";
 import {BigPlatform} from "./bigPlatform.js";
 import {Wall} from "./wall.js";
+import {Lives} from "./lives.js";
+import {Score} from "./score.js";
+import {ChickenDrumstick} from "./chickenDrumstick.js";
 
 export class Level2 extends Scene {
 
@@ -29,13 +32,27 @@ export class Level2 extends Scene {
 
         this.add(new Door(460, 515));
 
+        this.add(new ChickenDrumstick(310, 50))
+
+        this.add(new ChickenDrumstick(900, 250))
+
+        this.add(new ChickenDrumstick(1230, 480))
+
         // 1280 x 720
 
-        this.blackCat = new BlackCat();
-        this.add(this.blackCat);
+        const livesLabel = new Lives();
+        this.add(livesLabel);
 
-        this.whiteCat = new WhiteCat();
+        const scoreLabel = new Score();
+        this.add(scoreLabel);
+
+        this.blackCat = new BlackCat(livesLabel, scoreLabel);
+        this.add(this.blackCat);
+        livesLabel.setBlackCat(this.blackCat);
+
+        this.whiteCat = new WhiteCat(livesLabel, scoreLabel);
         this.add(this.whiteCat);
+        livesLabel.setWhiteCat(this.whiteCat);
     }
 
     onPreUpdate(engine) {

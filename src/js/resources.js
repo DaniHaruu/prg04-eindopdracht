@@ -18,7 +18,8 @@ const Resources = {
     FireHoopOff: new ImageSource('images/fireHoopOff.png'),
     FireHoopLit: new ImageSource('images/fireHoopLit.png'),
     FireHoopStand: new ImageSource('images/fireHoopStand.png'),
-    MiniPlatform: new ImageSource('/images/miniPlatform.png')
+    MiniPlatform: new ImageSource('/images/miniPlatform.png'),
+    ChickenDrumstick: new ImageSource('/images/chickenDrumstick.png')
 }
 
 const ResourceLoader = new Loader()
