@@ -14,7 +14,11 @@ const Resources = {
     WinScreen: new ImageSource('/images/winScreen.jpg'),
     Door: new ImageSource('/images/door.png'),
     BigPlatform: new ImageSource('/images/bigPlatform.png'),
-    Wall: new ImageSource('/images/wall.png')
+    Wall: new ImageSource('/images/wall.png'),
+    FireHoopOff: new ImageSource('images/fireHoopOff.png'),
+    FireHoopLit: new ImageSource('images/fireHoopLit.png'),
+    FireHoopStand: new ImageSource('images/fireHoopStand.png'),
+    MiniPlatform: new ImageSource('/images/miniPlatform.png')
 }
 
 const ResourceLoader = new Loader()

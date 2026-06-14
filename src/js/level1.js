@@ -6,6 +6,9 @@ import {BlackCat} from "./blackCat.js";
 import {WhiteCat} from "./whiteCat.js";
 import {Platform} from "./platform.js";
 import {Door} from "./door.js";
+import {Lives} from "./lives.js";
+import {FireHoop} from "./fireHoop.js";
+import {MiniPlatform} from "./miniPlatform.js";
 
 export class Level1 extends Scene {
 
@@ -25,13 +28,27 @@ export class Level1 extends Scene {
 
         this.add(new Door(640, 515));
 
+        this.add(new MiniPlatform(400, 600));
+
+        this.add(new FireHoop(400, 500));
+
+        this.add(new MiniPlatform(875, 600));
+
+        this.add(new FireHoop(875, 500));
+
+
         // 1280 x 720
 
-        this.blackCat = new BlackCat();
-        this.add(this.blackCat);
+        const livesLabel = new Lives();
+        this.add(livesLabel);
 
-        this.whiteCat = new WhiteCat();
+        this.blackCat = new BlackCat(livesLabel);
+        this.add(this.blackCat);
+        livesLabel.setBlackCat(this.blackCat);
+
+        this.whiteCat = new WhiteCat(livesLabel);
         this.add(this.whiteCat);
+        livesLabel.setWhiteCat(this.whiteCat);
     }
 
     onPreUpdate(engine) {

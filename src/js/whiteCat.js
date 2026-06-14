@@ -1,14 +1,17 @@
 import {Actor, Vector, Keys, Animation, CollisionType} from "excalibur";
 import {ResourceLoader, Resources} from "./resources.js";
 import {Door} from "./door.js";
+import {Lives} from "./lives.js";
 
 export class WhiteCat extends Actor {
+    livesLabel;
 
-    constructor() {
+    constructor(livesLabel) {
         super({
             width: Resources.WhiteIdle.width, height: Resources.WhiteIdle.height
         })
         console.log("Mew")
+        this.livesLabel = livesLabel
 
         // animations
         const idle = Resources.WhiteIdle.toSprite()
@@ -42,6 +45,8 @@ export class WhiteCat extends Actor {
         this.body.mass = 6
         this.on('collisionstart', (event) => this.hitDoor(event))
         this.on('collisionend', (event) => this.leftDoor(event))
+        // this.on('collisionstart', (event) => this.hitSomething(event))
+        this.lives = 3
     }
 
     hitDoor(event) {
@@ -55,6 +60,13 @@ export class WhiteCat extends Actor {
             this.atDoor = false
         }
     }
+
+    // hitSomething(event) {
+    //     if (event.other.owner instanceof Coin) {
+    //         event.other.owner.kill()
+    //         this.scoreLabel.incScore();
+    //     }
+    // }
 
     onPreUpdate(engine) {
         let velX = 0
