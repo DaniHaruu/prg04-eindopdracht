@@ -38,8 +38,6 @@ export class Level2 extends Scene {
 
         this.add(new ChickenDrumstick(1230, 480))
 
-        // 1280 x 720
-
         const livesLabel = new Lives();
         this.add(livesLabel);
 
