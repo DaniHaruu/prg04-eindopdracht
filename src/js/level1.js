@@ -28,13 +28,13 @@ export class Level1 extends Scene {
 
         this.add(new Door(640, 515));
 
-        this.add(new MiniPlatform(400, 600));
+        this.add(new MiniPlatform(400, 550));
 
-        this.add(new FireHoop(400, 500));
+        this.add(new FireHoop(400, 450));
 
-        this.add(new MiniPlatform(875, 600));
+        this.add(new MiniPlatform(875, 550));
 
-        this.add(new FireHoop(875, 500));
+        this.add(new FireHoop(875, 450));
 
 
         // 1280 x 720
